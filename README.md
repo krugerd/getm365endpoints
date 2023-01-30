@@ -1,22 +1,22 @@
 # getm365endpoints
 
 ## About
-Microsoft publishes a web page of all M365 endpoints.  Endpoints are the set of destination IP addresses, ports, DNS domain names, and URLs required by users to access M365 cloud-based services on the Internet.  Microsoft makes available a REST API Web Service  to help customers programmatically consume this information.
+Microsoft publishes a web page of all M365 endpoints which are the set of destination IP addresses, ports, DNS domain names, and URLs required by users to access M365 cloud-based services on the Internet.  Microsoft makes available a REST API Web Service to help customers programmatically consume this information.
 
 Endpoints:   https://aka.ms/o365endpoints
 
 Web service: https://learn.microsoft.com/en-us/microsoft-365/enterprise/microsoft-365-ip-web-service?view=o365-worldwide
 
-The default output from the web service may not be in a format you require, or easy to consume.  
+The default output from the web service however may not be in a format you require, or easy to consume.  
 
-This script was developed to simplify and automate the process of checking for updates, retrieving the latest endpoints, and sorting and filtering the output into various easy to read and sorted outputs and formats.
+This script was developed to simplify and automate the process of checking for updates, retrieving the latest endpoints, and sorting and filtering the output into various easy to read outputs and formats.
 
 It creates several files including:
 - an Excel spreadsheet detailing IPs and URLs by category (Optimize, Allow, Default), by Required or Optional, and by port
 - text files of IPs and URLs by category, service area, port, etc.
-- text file of IPs and URLs in .pac file format
+- text file of URLs in .pac file format
 - text files of IPs by CIDR notation, subnet mask notation, or wildcard mask notation
-- csv files of all current IP and URLs, csv of change logs between versions, and csv of notes only
+- csv files of all current IP and URLs, change logs between versions, and notes, etc.
 
 ## Updates to IPs and URLs
 Updates to the M365 endpoint lists are made approximately monthly at the end of the month, so subscribing to the RSS feed will ensure you receive emails from Microsoft when any changes to the endpoints are made.  This way you only need to run the script when you get an alert that the endpoint list has been updated.
