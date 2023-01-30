@@ -5,7 +5,7 @@ Microsoft publishes a web page of all M365 endpoints which are the set of destin
 
 Endpoints:   https://aka.ms/o365endpoints
 
-Web service: https://learn.microsoft.com/en-us/microsoft-365/enterprise/microsoft-365-ip-web-service?view=o365-worldwide
+Web service: https://learn.microsoft.com/en-us/microsoft-365/enterprise/microsoft-365-ip-web-service
 
 The default output from the web service however may not be in a format you require, or easy to consume.  
 
