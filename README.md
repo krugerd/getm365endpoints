@@ -7,12 +7,12 @@ Endpoints:   https://aka.ms/o365endpoints
 
 Web service: https://learn.microsoft.com/en-us/microsoft-365/enterprise/microsoft-365-ip-web-service
 
-The default output from the web service however may not be in a format you require, or easy to consume.  
+The default output from the web service however may not be in a format you require, or easy to consume.  For example, the IPs and URLs are listed by ID and the same network range can be shown several times in the list.
 
 This script was developed to simplify and automate the process of checking for updates, retrieving the latest endpoints, and sorting and filtering the output into various easy to read outputs and formats.
 
 It creates several files including:
-- an Excel spreadsheet detailing IPs and URLs by category (Optimize, Allow, Default), by Required or Optional, and by port
+- an Excel spreadsheet detailing IPs and URLs by category (Optimize, Allow, Default), by Required or Optional, and by port (requires Excel)
 - text files of IPs and URLs by category, service area, port, etc.
 - text file of URLs in .pac file format
 - text files of IPs by CIDR notation, subnet mask notation, or wildcard mask notation
