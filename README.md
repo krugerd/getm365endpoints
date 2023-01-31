@@ -18,6 +18,9 @@ It creates several files including:
 - text files of IPs by CIDR notation, subnet mask notation, or wildcard mask notation
 - csv files of all current IP and URLs, change logs between versions, and notes, etc.
 
+## Snippet of spreadsheet created:
+![image](https://user-images.githubusercontent.com/99920431/215800088-b327db21-b4cd-470a-8697-ee0a2cdb70f2.png)
+
 ## Updates to IPs and URLs
 Updates to the M365 endpoint lists are made approximately monthly at the end of the month, so subscribing to the RSS feed will ensure you receive emails from Microsoft when any changes to the endpoints are made.  This way you only need to run the script when you get an alert that the endpoint list has been updated.
 You may also want to create a rule or flow to be alerted when the RSS feed is updated.
