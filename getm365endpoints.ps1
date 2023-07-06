@@ -1,7 +1,7 @@
 <#
 
 source:       https://github.com/krugerd/getm365endpoints
-version:      0.21
+version:      0.22
 
 #####################################################################################
 
@@ -35,7 +35,7 @@ SOFTWARE.
 $TenantName = "TenantName"
 
 #set scriptversion
-$scriptversion = "0.21"
+$scriptversion = "0.22"
 
 #set working directory and put us in that directory for all files
 $workdir = $env:temp + "\getm365endpoints"
@@ -732,7 +732,9 @@ write-output "`nCreating excel file...`n"
 $excel = New-Object -ComObject excel.application
 $excel.visible = $True
 $workbook = $excel.Workbooks.Add()
-#$workbook.Worksheets.Item(3).Delete()
+
+$workbook.Worksheets.Item(2).Delete()
+$workbook.Worksheets.Item(2).Delete() #need twice as it deletes 2, then 3 becomes 2
 
 #select and name
 $ws = $workbook.Worksheets.Item(1)
@@ -993,13 +995,18 @@ $excel.activewindow.FreezePanes = $true  #fixthis activewindow
 #autofit
 $ws.UsedRange.EntireColumn.AutoFit() | Out-Null
 
+$ws.Cells.Item(1,1).Select() 
+
 #gridlines
 #$Excel.ActiveWindow.DisplayGridlines = $True
 
-#select worksheet 1
-$ws = $workbook.Worksheets.Item(1)
+#select 'all' worksheet #now second tab
+$ws = $workbook.Worksheets.Item(2)
 $ws.Activate()
-$ws.Cells.Item("1,1").Select() | out-null
+$ws.Cells.Item(1,1).Select() 
+
+#move sheets
+$workbook.Worksheets.Item(2).Move($workbook.Worksheets.Item(1))
 
 #saving & closing the file
 $workbook.SaveAs("$workdir\$($version.latest)\m365 Endpoints v$($version.latest).xlsx")
